@@ -10,6 +10,12 @@
         margin-left: auto;
         margin-right: auto;
       }
+      .zoom {
+        transition: transform .2s;
+      }
+      .zoom:hover {
+        transform: scale(1.2);
+      }
       </style>
     <title>I AM SMART</title>
     <link
@@ -40,11 +46,11 @@
     <!-- tab bar -->
     <div class="text-bg-info text-white mb-2 ">
       <div class="d-flex align-items-center mx-auto" style="max-width: 1300px;">
-        <a class="me-auto h2" href="manu.html">SMART</a>
+        <a class="me-auto h2 zoom" href="manu.html">SMART</a>
         <div class="hstack gap-3">
-          <a href="Profile.html" >Profile</a>
-          <a href="Experience.html" >Experience</a>
-          <a href="contact.html">Contact</a>
+          <a class="zoom" href="Profile.html" >Profile</a>
+          <a class="zoom" href="Experience.html" >Experience</a>
+          <a class="zoom" href="contact.html">Contact</a>
         </div>
       </div>
     </div>
@@ -52,7 +58,7 @@
     <div class="d-flex justify-content-center">
         <div>
             <!-- card1 -->
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="card mb-3 zoom" style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img src="img/น้องพลอย1.jpg"
@@ -68,7 +74,7 @@
                 </div>
             </div>
             <!-- card2 -->
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="card mb-3 zoom" style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img src="img/IMG_1498.PNG"
@@ -85,7 +91,7 @@
                 </div>
             </div>
             <!-- card3 -->
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="card mb-3 zoom" style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img src="img/ไฟล์_000.png"

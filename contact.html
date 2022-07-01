@@ -10,6 +10,12 @@
         margin-left: auto;
         margin-right: auto;
       }
+      .zoom {
+        transition: transform 0.2s;
+      }
+      .zoom:hover {
+        transform: scale(1.2);
+      }
     </style>
     <title>I AM SMART</title>
     <link
@@ -47,17 +53,17 @@
     <!-- tab bar -->
     <div class="text-bg-info text-white mb-2">
       <div class="d-flex align-items-center mx-auto" style="max-width: 1300px">
-        <a class="me-auto h2" href="manu.html">SMART</a>
+        <a class="me-auto h2 zoom" href="manu.html">SMART</a>
         <div class="hstack gap-3">
-          <a href="Profile.html">Profile</a>
-          <a href="Experience.html">Experience</a>
-          <a href="contact.html">Contact</a>
+          <a class="zoom" href="Profile.html">Profile</a>
+          <a class="zoom" href="Experience.html">Experience</a>
+          <a class="zoom" href="contact.html">Contact</a>
         </div>
       </div>
     </div>
-    <div class="position-absolute top-50 start-50 translate-middle">
-      <div class="card-group">
-        <div class="card text-bg-primary">
+    <div class="d-flex justify-content-center">
+      <div class="card-group my-5">
+        <div class="card text-bg-primary" style="width: 200px">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png"
             class="card-img-top bg-white"
@@ -73,7 +79,7 @@
             >
           </div>
         </div>
-        <div class="card text-bg-info">
+        <div class="card text-bg-info" style="width: 200px">
           <img
             src="https://www.shareicon.net/download/2016/07/06/110727_outlook.svg"
             class="card-img-top bg-white"
@@ -84,13 +90,13 @@
               target="_blank"
               style="text-decoration: none"
               class="text-white"
-              href="https://outlook.office.com/mail/"
+              href="mailto:#"
             >
               pattharapon_takham@cmu.ac.th
             </a>
           </div>
         </div>
-        <div class="card text-bg-success">
+        <div class="card text-bg-success" style="width: 200px">
           <img
             src="https://play-lh.googleusercontent.com/Mj_V8HPUGi5wmXz_Ecz7X3FJxGhOuDP6Sip9VgyBAW9p7C2cl9aOMSzNP9YadJWimPQ"
             class="card-img-top bg-white"

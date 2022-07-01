@@ -10,6 +10,12 @@
         margin-left: auto;
         margin-right: auto;
       }
+      .zoom {
+        transition: transform .2s;
+      }
+      .zoom:hover {
+        transform: scale(1.2);
+      }
       </style>
     <title>I AM SMART</title>
     <link
@@ -33,6 +39,30 @@
             color: white;
             text-decoration: none;
         }
+        .collapsible {
+            background-color:#97d3df;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #0dcaf0;
+            color: white;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f2f1f1;
+            text-align: center;
+        }
     </style>
   </head>
 
@@ -40,11 +70,11 @@
     <!-- tab bar -->
     <div class="text-bg-info text-white mb-2 ">
       <div class="d-flex align-items-center mx-auto" style="max-width: 1300px;">
-        <a class="me-auto h2" href="manu.html">SMART</a>
+        <a class="me-auto h2 zoom" href="manu.html">SMART</a>
         <div class="hstack gap-3">
-          <a href="Profile.html" >Profile</a>
-          <a href="Experience.html" >Experience</a>
-          <a href="contact.html">Contact</a>
+          <a class="zoom" href="Profile.html" >Profile</a>
+          <a class="zoom" href="Experience.html" >Experience</a>
+          <a class="zoom" href="contact.html">Contact</a>
         </div>
       </div>
     </div>
@@ -60,35 +90,53 @@
           >
           <span class="fw-bold h3 text-center">PATTHARAPON TAKHAM</span>
         </div>
-        <div class="border border-2 border-info rounded-3 p-2 vstack gap-2">
-          <div class="vstack">
-            <span class="text-center text-bg-dark">NICKNAME</span>
-            <span class="text-center text-bg-light">smart</span>
-          </div>
-          <div class="vstack">
-            <span class="text-center text-bg-dark">BIRTHDAY</span>
-            <span class="text-center text-bg-light">30 Sep. 2002</span>
-          </div>
-          <div class="vstack">
-            <span class="text-center text-bg-dark">BLOOD'S GROUP</span>
-            <span class="text-center text-bg-light">B</span>
-          </div>
-          <div class="vstack">
-            <span class="text-center text-bg-dark">MY PLACE</span>
-            <span class="text-center text-bg-light">242 Moo.8 Tumbon.ngim Ampher.Pong Phayao</span>
-          </div>
-          <div class="vstack">
-            <span class="text-center text-bg-dark">EDUCATION'S BACKGROUND</span>
-            <span class="text-center text-bg-light">Studying a Chiang Mai University</span>
-          </div>
-          <div class="vstack">
-            <span class="text-center text-bg-dark">CHARATERISTIC</span>
-            <span class="text-center text-bg-light">Factious, Amusing (Playful) Friendly and talk openly</span>
-          </div>
-          <div class="vstack">
-            <span class="text-center text-bg-dark">HOBBIES</span>
-            <span class="text-center text-bg-light">Listen to music , see movies , read book and surf the net</span>
-          </div>
+        <div class="vstack gap-0">
+            <button type="button" class="collapsible fw-bold">NICKNAME</button>
+            <div class="content border border-2">
+              <p>smart</p>
+            </div>
+            <button type="button" class="collapsible fw-bold">BIRTHDAY</button>
+            <div class="content border border-2">
+              <p>30 Sep. 2002</p>
+            </div>
+            <button type="button" class="collapsible fw-bold">BLOOD'S GROUP</button>
+            <div class="content border border-2">
+              <p>B</p>
+            </div>
+            <button type="button" class="collapsible fw-bold">MY PLACE</button>
+            <div class="content border border-2">
+              <p>242 Moo.8 Tumbon.ngim Ampher.Pong Phayao</p>
+            </div>
+            <button type="button" class="collapsible fw-bold">EDUCATION'S BACKGROUND</button>
+            <div class="content border border-2">
+              <p>Studying a Chiang Mai University</p>
+            </div>
+            <button type="button" class="collapsible fw-bold">CHARATERISTIC</button>
+            <div class="content border border-2">
+              <p>Factious, Amusing (Playful) Friendly and talk openly</p>
+            </div>
+            <button type="button" class="collapsible fw-bold">HOBBIES</button>
+            <div class="content border border-2">
+              <p>Listen to music , see movies , read book and surf the net</p>
+            </div>
+
+
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+                
+                for (i = 0; i < coll.length; i++) {
+                  coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+            </script>
         </div>
       </div>
       
